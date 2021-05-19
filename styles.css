@@ -1,0 +1,157 @@
+:root {
+  --bg-headings-btns-color: hsl(0, 0%, 95%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 15px;
+  background-color: hsl(0, 0%, 95%);
+  min-height: 100vh;
+}
+
+.preview-components-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.car-icon,
+.car-header,
+.car-description,
+.learn-btn {
+  margin: 20px 0;
+}
+
+.car-icon {
+  width: 64px;
+}
+
+.container {
+  padding: 30px;
+}
+
+.container:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.container:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.container .car-header {
+  font-size: 2.2em;
+  text-transform: uppercase;
+  font-family: 'Big Shoulders Display', sans-serif;
+  color: var(--bg-headings-btns-color);
+}
+
+.container.sedans {
+  background-color: hsl(31, 77%, 52%);
+}
+
+.container.suvs {
+  background-color: hsl(184, 100%, 22%)
+}
+
+.container.luxury {
+  background-color: hsl(179, 100%, 13%)
+}
+
+.container .car-description {
+  font-family: 'Lexend Deca', sans-serif;
+  color: hsla(0, 0%, 100%, 0.75);
+  max-width: 200px;
+  font-weight: 400;
+}
+
+.learn-btn {
+  text-decoration: none;
+  background-color: var(--bg-headings-btns-color);
+  font-family: 'Lexend Deca', sans-serif;
+  border: 2px solid var(--bg-headings-btns-color);
+  border-radius: 20px;
+  text-align: center;
+  padding: 8px;
+  width: 70%;
+  transition: background-color 0.3s ease;
+}
+
+.sedans .learn-btn {
+  color: hsl(31, 77%, 52%);
+}
+
+.suvs .learn-btn {
+  color: hsl(184, 100%, 22%);
+}
+
+.luxury .learn-btn {
+  color: hsl(179, 100%, 13%);
+}
+
+.learn-btn:hover {
+  background-color: transparent;
+  color: var(--bg-headings-btns-color);
+}
+
+@media screen and (max-width: 779px) {
+  .preview-components-container {
+    flex-direction: column;
+  }
+
+  .container {
+    padding: 30px 50px;
+  }
+
+  .container:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .container:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .car-icon,
+  .car-header,
+  .car-description,
+  .learn-btn {
+    margin: 15px 0;
+  }
+
+  .car-description {
+    font-size: 16px;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+
+  .container:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .container:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+
+}
